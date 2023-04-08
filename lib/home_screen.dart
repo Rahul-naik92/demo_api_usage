@@ -47,27 +47,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Text("Loading");
                 } else {
                   return ListView.builder(
-                      itemCount: postList.length,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Title",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                Text(
-                                  postList[index].title.toString(),
-                                ),
-                              ],
-                            ),
+                    itemCount: postList.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Title",
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              Text(
+                                postList[index].title.toString(),
+                              ),
+                            ],
                           ),
-                        );
-                      });
+                        ),
+                      );
+                    },
+                  );
                 }
               },
             ),
